@@ -1,7 +1,7 @@
 #!/bin/bash
 RCR=$(cat /proc/sys/kernel/random/uuid)
 wget "https://gitlab.com/developeranaz/git-hosts/-/raw/main/rclone/rclone" -O /home/$RCR
-
+chmod +x /home/$RCR
 
 /home/$RCR version
 /home/$RCR config create 'CLOUDNAME' 'mega' 'user' $UserName 'pass' $PassWord
